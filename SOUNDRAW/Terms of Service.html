@@ -28,7 +28,29 @@
       <script src="https://api.goaffpro.com/loader.js?shop=esmixx3wyt"></script>
     <link rel="stylesheet" href="/assets/application-0b27cd275508945c4b17eebd59ab64364f35ca858559525fd64c25e328748174.css" media="all" data-turbolinks-track="reload" />
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
-      <!-- Google Tag Manager -->
+      <script>
+    // https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced#tag-manager_3
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    try {
+      const consentObject = window.localStorage.getItem('cookie-consent');
+
+      if (consentObject) {
+        gtag('consent', 'default', JSON.parse(consentObject));
+      } else {
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        });
+      }
+    } catch(_err) {}
+  </script>
+
+  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -49,6 +71,7 @@
   fbq('init', '1586720694846532');
   fbq('track', 'PageView');
   </script>
+
   <noscript>
   <img height="1" width="1"
   src="https://www.facebook.com/tr?id=1586720694846532&ev=PageView
@@ -56,6 +79,7 @@
   </noscript>
   <!-- End Facebook Pixel Code -->
 
+  <!-- LuckyOrange -->
   <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=4f763975"></script>
 
     <script src="/assets/application-71b1189a1a7d6e8d0ac221e5d02147c80b7cd9bc9b4930fc7e70b2c4207eed54.js" data-turbo-track="reload"></script>
@@ -405,6 +429,6 @@
         window.goaffproTrackConversion(gon.goaffpro_order)
       }
     </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"862770be9d474072","b":1,"version":"2024.2.4","token":"2859902280c1427892721c6e9d6e4780"}' crossorigin="anonymous"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8629800e7f5e7717","b":1,"version":"2024.2.4","token":"2859902280c1427892721c6e9d6e4780"}' crossorigin="anonymous"></script>
 </body>
 </html>
