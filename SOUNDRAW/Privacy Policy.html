@@ -37,19 +37,19 @@
     try {
       const consentObject = window.localStorage.getItem('cookie-consent');
 
+      const defaultConsent = 'granted';
+
       if (consentObject) {
         gtag('consent', 'default', JSON.parse(consentObject));
       } else {
         gtag('consent', 'default', {
-          'ad_storage': 'denied',
-          'ad_user_data': 'denied',
-          'ad_personalization': 'denied',
-          'analytics_storage': 'denied',
+          'ad_storage': defaultConsent,
+          'ad_user_data': defaultConsent,
+          'ad_personalization': defaultConsent,
+          'analytics_storage': defaultConsent,
           'wait_for_update': 500,
         });
       }
-
-      gtag("set", "url_passthrough", true);
     } catch(_err) {}
   </script>
 
@@ -117,7 +117,7 @@
           <a class="text-font-semi-bold hover-white px-3 license-none " href="/license">License</a>
             <a class="hover-white px-3 font-avenir-next faq-none" href="https://soundrawhelp.zendesk.com/hc/en-us" target="_blank" rel="noopener noreferrer">FAQ</a>
           <a class="text-font-semi-bold hover-white px-3 api-for-business-none" target="_blank" href="https://discover.soundraw.io/api">API for Businesses</a>
-              <a class="text-font-semi-bold hover-white px-3 pricing-none" href="/#pricing-section">Pricing</a>
+                <a class="text-font-semi-bold hover-white px-3 pricing-none" href="/#pricing-section">Pricing</a>
         </div>
 
           <div class="d-flex align-items-center">
@@ -396,6 +396,6 @@
         window.goaffproTrackConversion(gon.goaffpro_order)
       }
     </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"86423842a9f47708","b":1,"version":"2024.2.4","token":"2859902280c1427892721c6e9d6e4780"}' crossorigin="anonymous"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"864447a8ba36889e","b":1,"version":"2024.2.4","token":"2859902280c1427892721c6e9d6e4780"}' crossorigin="anonymous"></script>
 </body>
 </html>
