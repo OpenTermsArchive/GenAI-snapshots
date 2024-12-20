@@ -35,7 +35,7 @@
     <meta property="twitter:image" content="https://cdn.soundraw.io/soundraw_ogp_EN.png">
     <meta name="csp-nonce" content="" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon-65fa692e0ba06519edfaf3224c823528eb2cec9997a3443c9d8d13bf8cb312f3.ico" />
-      <script src="/assets/sentry-a6bf4805c8a55d089ab7a0bd734444a3af7dc6937ff6b998e64f84360a759a46.js" data-turbo-track="reload" nonce=""></script>
+      <script src="/assets/sentry-60a7ea6a772bb036dd6b9c8f3c7c58a6583b150cec6d7b7c02bb61bfc7cacbfe.js" data-turbo-track="reload" nonce=""></script>
       <script src="https://api.goaffpro.com/loader.js?shop=esmixx3wyt" nonce=""></script>
     <link rel="stylesheet" href="/assets/application-41dfdd4182d4dd5c2a36d27e74a79379a33fab30a7e61be8651cd2e0b9209da8.css" media="all" data-turbolinks-track="reload" nonce="true" />
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js" nonce=""></script>
@@ -106,7 +106,7 @@
   <!-- LuckyOrange -->
   <script src="https://tools.luckyorange.com/core/lo.js?site-id=4f763975" async="async" nonce=""></script>
 
-    <script src="/assets/application-331c03687f7e1973ee52a05f5a7d85dbbd23a18b46039d4b0aad6919c8079c44.js" data-turbo-track="reload" nonce=""></script>
+    <script src="/assets/application-d7ef0882ffecba5198c4f495c2b0f518ddc9ef62a0af2c4775b26701b2e87622.js" data-turbo-track="reload" nonce=""></script>
   </head>
 
   <body lang="en" class="bg-dark 100vh" >
@@ -135,7 +135,7 @@
             </div>
           </div>
           <a class="text-font-semi-bold hover-white px-3 license-none " href="/license">License</a>
-          <a class="hover-white px-3 text-font-semi-bold faq-none" href=https://soundrawhelp.zendesk.com/hc/en-us target="_blank" rel="noopener noreferrer">FAQ</a>
+          <a class="hover-white px-3 text-font-semi-bold faq-none" href=https://docs.channel.io/soundraw-faq target="_blank" rel="noopener noreferrer">FAQ</a>
           <a class="text-font-semi-bold hover-white px-3 api-for-business-none" target="_blank" href="https://discover.soundraw.io/api">API for Business</a>
             <a class="text-font-semi-bold hover-white px-3 pricing-none" href="/home#pricing-section">Pricing</a>
         </div>
@@ -440,8 +440,55 @@
 </div>
 
 
-        <script src="https://static.zdassets.com/ekr/snippet.js?key=01cfe772-4fb2-45f1-9f69-d259218ee372" nonce="" id="ze-snippet"></script>
+        <script nonce="">
+//<![CDATA[
 
+    (function() {
+      var w = window;
+      if (w.ChannelIO) {
+        return w.console.error("ChannelIO script included twice.");
+      }
+      var ch = function() {
+        ch.c(arguments);
+      };
+      ch.q = [];
+      ch.c = function(args) {
+        ch.q.push(args);
+      };
+      w.ChannelIO = ch;
+      function l() {
+        if (w.ChannelIOInitialized) {
+          return;
+        }
+        w.ChannelIOInitialized = true;
+        var s = document.createElement("script");
+        s.type="text/javascript";
+        s.async=true;
+        s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";
+        var x= document.getElementsByTagName("script")[0];
+        if (x.parentNode) {
+          x.parentNode.insertBefore(s,x);
+        }
+      }
+      if (document.readyState==="complete") {
+        l();
+      } else {
+        w.addEventListener("DOMContentLoaded",l);
+        w.addEventListener("load",l);
+      }
+    })();
+
+    ChannelIO('boot', {
+      "pluginKey": "49b2438d-8d0e-4c0c-9967-2ea420ed90e5",
+      "memberId": "",
+      "profile": {
+        "subscribed": "",
+        "plan": "",
+      }
+    });
+
+//]]>
+</script>
       <footer>
   <ul class="d-flex">
     <li><a class="footer-link small footer-list-privacy-policy" target="_blank" href="https://discover.soundraw.io/company">About Us</a></li>
