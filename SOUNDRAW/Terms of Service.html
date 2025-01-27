@@ -35,7 +35,7 @@
     <meta property="twitter:image" content="https://cdn.soundraw.io/soundraw_ogp_EN.png">
     <meta name="csp-nonce" content="" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon-65fa692e0ba06519edfaf3224c823528eb2cec9997a3443c9d8d13bf8cb312f3.ico" />
-      <script src="/assets/sentry-e6a66509deccfec4bfbfb802e38b02207d5f2011deeda77d0c3c6cb4c4d1cfe8.js" data-turbo-track="reload" nonce=""></script>
+      <script src="/assets/sentry-28a9120375d7dcd9249761f5b9847d471c142d0d89159da32a082bf13a455a60.js" data-turbo-track="reload" nonce=""></script>
       <script src="https://api.goaffpro.com/loader.js?shop=esmixx3wyt" nonce=""></script>
     <link rel="stylesheet" href="/assets/application-41dfdd4182d4dd5c2a36d27e74a79379a33fab30a7e61be8651cd2e0b9209da8.css" media="all" data-turbolinks-track="reload" nonce="true" />
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js" nonce=""></script>
@@ -106,7 +106,7 @@
   <!-- LuckyOrange -->
   <script src="https://tools.luckyorange.com/core/lo.js?site-id=4f763975" async="async" nonce=""></script>
 
-    <script src="/assets/application-94e3b08122defc1d5e194b545632bd03739a533f7288dcdab5ff8b9b76c587f7.js" data-turbo-track="reload" nonce=""></script>
+    <script src="/assets/application-07babfc0ba34639b0185f2228e75d0909fdbc3eec9ae04023f40c296c7112acc.js" data-turbo-track="reload" nonce=""></script>
   </head>
 
   <body lang="en" class="bg-dark 100vh" >
@@ -136,7 +136,27 @@
           </div>
           <a class="text-font-semi-bold hover-white px-3 license-none " href="/license">License</a>
           <a class="hover-white px-3 text-font-semi-bold faq-none" href=https://docs.channel.io/soundraw-faq target="_blank" rel="noopener noreferrer">FAQ</a>
-          <a class="text-font-semi-bold hover-white px-3 api-for-business-none" target="_blank" href="https://discover.soundraw.io/api">API for Business</a>
+          <div class="business-menu-container">
+              <div class="business-menu-trigger">
+                <div class="business-menu-label hover-white">
+                  For Businesses
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="dropdown-arrow">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00002 5.50003L12 5.5C12.2022 5.5 12.3846 5.62182 12.462 5.80865C12.5394 5.99549 12.4966 6.21055 12.3536 6.35355L8.35357 10.3535C8.15837 10.5488 7.84177 10.5488 7.6465 10.3535L3.64646 6.35359C3.50346 6.21059 3.46068 5.99553 3.53808 5.80869C3.61546 5.62185 3.79778 5.50003 4.00002 5.50003Z" fill="currentColor"/>
+                  </svg>
+                </div>
+            </div>
+            <div class="business-menu-dropdown">
+              <a href="https://discover.soundraw.io/api" class="business-menu-item hover-white">
+                API
+              </a>
+              <a href="https://discover.soundraw.io/enterprise" class="business-menu-item hover-white">
+                Enterprise
+              </a>
+              <a href="https://discover.soundraw.io/academic" class="business-menu-item hover-white">
+                Academic
+              </a>
+            </div>
+        </div>
             <a class="text-font-semi-bold hover-white px-3 pricing-none" href="/home#pricing-section">Pricing</a>
         </div>
 
@@ -209,6 +229,88 @@
 </div>
 
 <style>
+  .business-menu-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .business-menu-trigger {
+    padding: 8px;
+    cursor: pointer;
+    display: none; /* Hidden by default on mobile */
+  }
+
+  @media (min-width: 992px) { /* lg breakpoint */
+    .business-menu-trigger {
+      display: block;
+    }
+  }
+
+  .business-menu-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .business-menu-button {
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1.25rem;
+    outline: none;
+    border: none;
+  }
+
+  .dropdown-arrow,
+  .business-menu-arrow {
+    transition: transform 300ms;
+  }
+
+  .business-menu-arrow.rotated,
+  .business-menu-container:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .business-menu-items,
+  .business-menu-dropdown {
+    display: none;
+  }
+
+
+
+  .business-menu-dropdown {
+    position: absolute;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin-top: -2px;
+    width: 160px;
+    z-index: 10;
+    background: #17202b;
+  }
+
+  .business-menu-items.visible,
+  .business-menu-container:hover .business-menu-dropdown {
+    display: block;
+  }
+
+  .business-menu-link,
+  .business-menu-item {
+    display: block;
+    padding: 8px 16px;
+    color: #ffffff;
+  }
+
+  .business-menu-link:hover,
+  .business-menu-item:hover {
+    color: rgb(255 251 147);
+  }
+
   .custom-tooltip {
     background: black;
     color: white;
@@ -228,6 +330,14 @@
 </style>
 <script nonce="">
 //<![CDATA[
+
+  function toggleBusinessMenu() {
+    const menuItems = document.getElementById('business-menu-items');
+    const arrow = document.getElementById('business-menu-arrow');
+    
+    menuItems.classList.toggle('visible');
+    arrow.classList.toggle('rotated');
+  }
 
   function openEveara() {
     window.dataLayer.push({
