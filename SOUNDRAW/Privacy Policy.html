@@ -40,89 +40,102 @@ window.gon={};gon.is_ios=false;gon.bugsnag={"api_key":"60c4d9df2d824d87e5283ee27
     <meta property="twitter:image" content="https://cdn.soundraw.io/soundraw_ogp_EN.png">
     <meta name="csp-nonce" content="" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon-65fa692e0ba06519edfaf3224c823528eb2cec9997a3443c9d8d13bf8cb312f3.ico" />
-      <script src="/assets/sentry-cd1edea451cfe5e2e692aaa838ea5430a981939c2e7e194c4ba65be751e49010.js" data-turbo-track="reload" nonce=""></script>
+      <script src="/assets/sentry-c4ecd6360617aae0d58c2278ba8e87c45e92d9678d6a7d299082996f88b90146.js" data-turbo-track="reload" nonce=""></script>
       <script src="https://api.goaffpro.com/loader.js?shop=esmixx3wyt" nonce=""></script>
     <link rel="stylesheet" href="/assets/application-a6f7e405d6f3730ab11ab2f1ea08c3487829246b9e1df73b4c46751dc0a5e01d.css" media="all" data-turbolinks-track="reload" nonce="true" />
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js" nonce=""></script>
-      <script nonce="">
+      <!-- [debug] if gtm_debug param is present, allow gtm -->
+    <!-- Google Tag Manager -->
+    <script>
 //<![CDATA[
 
-    // https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced#tag-manager_3
-    // Define dataLayer and the gtag function.
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+      console.log('Setting up Google Analytics');
 
-    try {
-      const consentObject = window.localStorage.getItem('cookie-consent');
-
-      const defaultConsent = 'granted';
-
-      if (consentObject) {
-        gtag('consent', 'default', JSON.parse(consentObject));
-      } else {
-        gtag('consent', 'default', {
-          'ad_storage': defaultConsent,
-          'ad_user_data': defaultConsent,
-          'ad_personalization': defaultConsent,
-          'analytics_storage': defaultConsent,
-          'wait_for_update': 500,
-        });
+      window.dataLayer = window.dataLayer || [];
+      
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    } catch(_err) {}
+
+      try {
+        const consentObject = window.localStorage.getItem('cookie-consent');
+        const defaultConsent = 'granted';
+
+        if (consentObject) {
+          gtag('consent', 'default', JSON.parse(consentObject));
+        } else {
+          gtag('consent', 'default', {
+            'ad_storage': defaultConsent,
+            'ad_user_data': defaultConsent,
+            'ad_personalization': defaultConsent,
+            'analytics_storage': defaultConsent,
+            'wait_for_update': 500,
+          });
+        }
+      } catch (error) {
+        console.error("Cookie consent handling error:", error);
+      }
+
+      try {
+        (function(w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+          });
+          var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MJMPB5J');
+      } catch(error) {
+        console.error("GTM failed to load:", error.message || error);
+      }
 
 //]]>
-</script>
-  <!-- Google Tag Manager -->
-  <script nonce="">
+</script>    <!-- End Google Tag Manager -->
+
+      <!-- Facebook Pixel Code -->
+    <script>
 //<![CDATA[
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MJMPB5J');
-//]]>
-</script>
-  <!-- End Google Tag Manager -->
 
-  <!-- Facebook Pixel Code -->
-  <script nonce="">
-//<![CDATA[
+      console.log('Setting up Facebook Pixel');
 
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window,document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1586720694846532');
-  fbq('track', 'PageView');
+      !function(f,b,e,v,n,t,s) {
+        if(f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if(!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1586720694846532');
+      fbq('track', 'PageView');
 
 //]]>
-</script>
-  <noscript>
-  <img height="1" width="1"
-  src="https://www.facebook.com/tr?id=1586720694846532&ev=PageView
-  &noscript=1"/>
-  </noscript>
+</script>    <noscript>
+      <img height="1" width="1" src="https://www.facebook.com/tr?id=1586720694846532&ev=PageView&noscript=1"/>
+    </noscript>
   <!-- End Facebook Pixel Code -->
 
-  <!-- LuckyOrange -->
-  <script src="https://tools.luckyorange.com/core/lo.js?site-id=4f763975" async="async" nonce=""></script>
-
-    <script src="/assets/application-1dd8e5f712b9650ce14eeb9b46d2e6f4099cff4f666876c9dc163e454c571d57.js" data-turbo-track="reload" nonce=""></script>
+    <script src="/assets/application-74f327aa6bbeff1f5cb571a8b3589b7fc46eb445c33ca4023f8f2459a7732583.js" data-turbo-track="reload" nonce=""></script>
   </head>
 
   <body lang="en" class="bg-dark 100vh" >
-       <!-- Google Tag Manager (noscript) -->
-       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJMPB5J"
-       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-       <!-- End Google Tag Manager (noscript) -->
     <link rel="stylesheet" href="/assets/tailwind-db45f1b6c35838ff554e4a2a546efd2121c0e3173d069290d7e4059d5480fbea.css" />
     <div class="sticky top-0 left-0 w-full bg-dark z-20">
       <div id="header">
-        <script src="/assets/header-0eb65755ff079873d0b9b2788c50163a0f73ba39144365d889a8ab6db6d61ca2.js" nonce=""></script>
+        <script src="/assets/header-816fbd4507a2af81662a20512d28908c469260b7e1ec99ca582796f6fae07d81.js" nonce=""></script>
       </div>
       
     </div>
