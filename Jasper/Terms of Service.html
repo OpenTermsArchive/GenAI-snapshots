@@ -1397,7 +1397,7 @@ function getQueryVariable(v) {
     if (jur) _ps('set', 'jurisdiction', jur);
     if (test_mode) _ps('set', 'test_mode', test_mode === "true" || test_mode === "1");
 
-    var cids = ["269077", "271312", "497095", "269076", "585136", "354620", "305995", "492105", "387059", "374042", "273253", "310891", "276236", "518863", "589982"];
+    var cids = ["269077", "271312", "497095", "269076", "585136", "354620", "305995", "492105", "387059", "374042", "273253", "310891", "276236", "518863"];
     _ps('retrieve', cids);
 
     _ps.on('retrieved', renderOptInOut);
@@ -1953,8 +1953,7 @@ var contractMap = {
     "eula": "273253",
     "affiliates": "310891",
     "google-api-disclosure": "276236",
-    "ccpa": "518863",
-    "survey-rules": "589982"
+    "candidate-notice": "518863"
 };
 
 attachReadyHandlers();
@@ -2036,10 +2035,7 @@ attachReadyHandlers();
             <a href="#google-api-disclosure" id="contract-nav-276236" class="inline-link contract-nav-link group-item" data-id="276236" data-groups="">Google API Disclosure</a>
           </li>
           <li>
-            <a href="#ccpa" id="contract-nav-518863" class="inline-link contract-nav-link group-item" data-id="518863" data-groups="">CCPA Notice to Candidates</a>
-          </li>
-          <li>
-            <a href="#survey-rules" id="contract-nav-589982" class="inline-link contract-nav-link group-item" data-id="589982" data-groups="">Survey Rules</a>
+            <a href="#candidate-notice" id="contract-nav-518863" class="inline-link contract-nav-link group-item" data-id="518863" data-groups="">Privacy Notice to Candidates</a>
           </li>
       </ul>
     </div>
@@ -3518,24 +3514,146 @@ attachReadyHandlers();
               </div>
           </div>
         </div>
-        <div id="contract-id-518863" class="contract-container group-item " data-location="s/116d43c3-cadd-4741-8ca1-92f005e5a64b/contracts/518863.pdf" data-id="518863" data-key="ccpa" data-groups="" style="display: none;">
+        <div id="contract-id-518863" class="contract-container group-item " data-location="s/116d43c3-cadd-4741-8ca1-92f005e5a64b/contracts/518863.pdf" data-id="518863" data-key="candidate-notice" data-groups="" style="display: none;">
           <div class="contract-header">
-            <h2>CCPA Notice to Candidates</h2>
+            <h2>Privacy Notice to Candidates</h2>
             <div class="row">
               <div class="six columns" id="version-effective-date-518863">
                   <label for="select-version-518863" class="select-version select-version-label">Version</label>
                   <select name="versions-518863" id="select-version-518863" class="select-version select-version-select input-select">
-                      <option selected="" value="contract-id-518863-version-6607235a5da682a17b6979c9" class="contract-id-518863-version-6607235a5da682a17b6979c9" data-version="1.0">Version 1.0&nbsp;&nbsp;(Current)</option>
+                      <option selected="" value="contract-id-518863-version-681b8ca348f860b951596d33" class="contract-id-518863-version-681b8ca348f860b951596d33" data-version="2.1">Version 2.1&nbsp;&nbsp;(Current)</option>
+                      <option value="contract-id-518863-version-681b8bfbd753569eebe7fe0e" class="contract-id-518863-version-681b8bfbd753569eebe7fe0e" data-version="2.0">Version 2.0</option>
+                      <option value="contract-id-518863-version-6607235a5da682a17b6979c9" class="contract-id-518863-version-6607235a5da682a17b6979c9" data-version="1.0">Version 1.0</option>
                   </select>
               </div>
             </div>
           </div>
           <div id="contract-versions-518863">
-              <div id="contract-id-518863-version-6607235a5da682a17b6979c9" data-vid="6607235a5da682a17b6979c9" data-location="https://vault.pactsafe.io/s/116d43c3-cadd-4741-8ca1-92f005e5a64b/versions/6607235a5da682a17b6979c9.pdf" class="version-container js-version-container-518863 " style="display: block;">
+              <div id="contract-id-518863-version-681b8ca348f860b951596d33" data-vid="681b8ca348f860b951596d33" data-location="https://vault.pactsafe.io/s/116d43c3-cadd-4741-8ca1-92f005e5a64b/versions/681b8ca348f860b951596d33.pdf" class="version-container js-version-container-518863 " style="display: block;">
+                <div id="version-languages-681b8ca348f860b951596d33" class="version-translation-container">
+                  <div id="version-681b8ca348f860b951596d33-locale-en-us" class="version-translation version-locale-en-us" data-locale="en-us" data-locale-gen="en" data-title-translation="Privacy Notice to Candidates" style="display: block;">
+                    <div class="row">
+                      <h5 class="effective-date" role="presentation">Effective May 7th 2025</h5>
+                      <a id="download-version-681b8ca348f860b951596d33-locale-en-us" href="https://jasper.pactsafe.io/versions/681b8ca348f860b951596d33.pdf" target="_blank" rel="noopener" class="version-download-link inline-link">Download</a>
+                    </div>
+
+
+                    <div class="table-of-contents">
+                      <hr class="divider table-of-contents-divider">
+                      <h3>Table of Contents</h3>
+                      <ol class="table-of-contents-links"></ol>
+                    </div>
+
+                    <hr class="divider body-divider">
+
+                    <div class="body js-body-681b8ca348f860b951596d33">
+                        <div id="viewer-container-681b8ca348f860b951596d33">
+                          <div id="viewer" class="pdfViewer"></div>
+                        </div>
+
+                        <div id="legacy-viewer-container-681b8ca348f860b951596d33" style="display: none;">
+                          <div class="split-panel-left">
+                            <div class="page-switcher-container">
+                              <svg title="prev" id="prev-681b8ca348f860b951596d33" class="svg-icon svg-icon-prev u-pull-left" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
+                                <path fill="#55a6e0" d="M16.9,30.3L4.6,18L16.9,5.7c0.5-0.5,0.5-1.4,0-1.8c-0.5-0.5-1.4-0.5-1.8,0L1.9,17.1 c-0.3,0.3-0.3,0.6-0.3,0.9s0.1,0.7,0.3,0.9L15,32.1c0.5,0.5,1.4,0.5,1.8,0C17.4,31.6,17.4,30.8,16.9,30.3z"></path>
+                                <path fill="#55a6e0" d="M33.1,19.3H4.3C3.6,19.3,3,18.7,3,18s0.6-1.3,1.3-1.3h28.8c0.7,0,1.3,0.6,1.3,1.3S33.9,19.3,33.1,19.3z"></path>
+                              </svg>
+                              <svg title="next" id="next-681b8ca348f860b951596d33" class="svg-icon svg-icon-next u-pull-right" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
+                                <path fill="#55a6e0" d="M19.2,32.1c0.4,0.5,1.3,0.5,1.8,0l13.1-13.2c0.2-0.2,0.3-0.6,0.3-0.9s0-0.6-0.3-0.9L20.9,3.9 c-0.4-0.5-1.3-0.5-1.8,0c-0.5,0.4-0.5,1.3,0,1.8L31.4,18L19.1,30.3C18.6,30.8,18.6,31.6,19.2,32.1z"></path>
+                                <path fill="#55a6e0" d="M1.6,18c0-0.7,0.6-1.3,1.3-1.3h28.8c0.7,0,1.3,0.6,1.3,1.3s-0.6,1.3-1.3,1.3H2.9C2.1,19.3,1.6,18.7,1.6,18z"></path>
+                              </svg>
+                            </div>
+                            <div class="zoom-button-container">
+                              <svg title="zoom-out" id="zoom-out-681b8ca348f860b951596d33" class="svg-icon svg-icon-zoom-out u-pull-left" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
+                                <path fill="#55a6e0" d="M35.5,17.5v1c0,0.7-0.6,1.2-1.2,1.2H1.8c-0.7,0-1.2-0.6-1.2-1.2v-1c0-0.7,0.6-1.2,1.2-1.2h32.5 C34.9,16.2,35.5,16.8,35.5,17.5z"></path>
+                              </svg>
+                              <svg title="zoom-in" id="zoom-in-681b8ca348f860b951596d33" class="svg-icon svg-icon-zoom-in u-pull-right" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
+                                <path fill="#55a6e0" d="M18.5,35.5h-1c-0.7,0-1.2-0.6-1.2-1.2V1.8c0-0.7,0.6-1.2,1.2-1.2h1c0.7,0,1.2,0.6,1.2,1.2v32.5 C19.8,34.9,19.2,35.5,18.5,35.5z"></path>
+                                <path fill="#55a6e0" d="M35.5,17.5v1c0,0.7-0.6,1.2-1.2,1.2H1.8c-0.7,0-1.2-0.6-1.2-1.2v-1c0-0.7,0.6-1.2,1.2-1.2h32.5 C34.9,16.2,35.5,16.8,35.5,17.5z"></path>
+                              </svg>
+                            </div>
+                            <div class="page-number-container">
+                              <span class="ps-label-order">Page:
+                                <span id="page_num-681b8ca348f860b951596d33"></span> / <span id="page_count-681b8ca348f860b951596d33"></span>
+                              </span>
+                            </div>
+                          </div>
+                          <canvas id="the-canvas-681b8ca348f860b951596d33"></canvas>
+                        </div>
+
+                        <div id="pdf-fallback-download-container-681b8ca348f860b951596d33" class="pdf-fallback-container">
+                          <span>Please download the PDF to view this document.</span>
+                          <a id="download-version-681b8ca348f860b951596d33-locale-en-us-fallback" href="https://jasper.pactsafe.io/versions/681b8ca348f860b951596d33.pdf" target="_blank" rel="noopener" class="version-download-link inline-link">Download</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="contract-id-518863-version-681b8bfbd753569eebe7fe0e" data-vid="681b8bfbd753569eebe7fe0e" data-location="https://vault.pactsafe.io/s/116d43c3-cadd-4741-8ca1-92f005e5a64b/versions/681b8bfbd753569eebe7fe0e.pdf" class="version-container js-version-container-518863 " style="display: none;">
+                <div id="version-languages-681b8bfbd753569eebe7fe0e" class="version-translation-container">
+                  <div id="version-681b8bfbd753569eebe7fe0e-locale-en-us" class="version-translation version-locale-en-us" data-locale="en-us" data-locale-gen="en" data-title-translation="CCPA Notice to Candidates" style="display: block;">
+                    <div class="row">
+                      <h5 class="effective-date" role="presentation">Effective May 7th 2025&nbsp;&nbsp;<span class="light">to</span>&nbsp;&nbsp;May 7th 2025</h5>
+                      <a id="download-version-681b8bfbd753569eebe7fe0e-locale-en-us" href="https://jasper.pactsafe.io/versions/681b8bfbd753569eebe7fe0e.pdf" target="_blank" rel="noopener" class="version-download-link inline-link">Download</a>
+                    </div>
+
+
+                    <div class="table-of-contents">
+                      <hr class="divider table-of-contents-divider">
+                      <h3>Table of Contents</h3>
+                      <ol class="table-of-contents-links"></ol>
+                    </div>
+
+                    <hr class="divider body-divider">
+
+                    <div class="body js-body-681b8bfbd753569eebe7fe0e">
+                        <div id="viewer-container-681b8bfbd753569eebe7fe0e">
+                          <div id="viewer" class="pdfViewer"></div>
+                        </div>
+
+                        <div id="legacy-viewer-container-681b8bfbd753569eebe7fe0e" style="display: none;">
+                          <div class="split-panel-left">
+                            <div class="page-switcher-container">
+                              <svg title="prev" id="prev-681b8bfbd753569eebe7fe0e" class="svg-icon svg-icon-prev u-pull-left" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
+                                <path fill="#55a6e0" d="M16.9,30.3L4.6,18L16.9,5.7c0.5-0.5,0.5-1.4,0-1.8c-0.5-0.5-1.4-0.5-1.8,0L1.9,17.1 c-0.3,0.3-0.3,0.6-0.3,0.9s0.1,0.7,0.3,0.9L15,32.1c0.5,0.5,1.4,0.5,1.8,0C17.4,31.6,17.4,30.8,16.9,30.3z"></path>
+                                <path fill="#55a6e0" d="M33.1,19.3H4.3C3.6,19.3,3,18.7,3,18s0.6-1.3,1.3-1.3h28.8c0.7,0,1.3,0.6,1.3,1.3S33.9,19.3,33.1,19.3z"></path>
+                              </svg>
+                              <svg title="next" id="next-681b8bfbd753569eebe7fe0e" class="svg-icon svg-icon-next u-pull-right" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
+                                <path fill="#55a6e0" d="M19.2,32.1c0.4,0.5,1.3,0.5,1.8,0l13.1-13.2c0.2-0.2,0.3-0.6,0.3-0.9s0-0.6-0.3-0.9L20.9,3.9 c-0.4-0.5-1.3-0.5-1.8,0c-0.5,0.4-0.5,1.3,0,1.8L31.4,18L19.1,30.3C18.6,30.8,18.6,31.6,19.2,32.1z"></path>
+                                <path fill="#55a6e0" d="M1.6,18c0-0.7,0.6-1.3,1.3-1.3h28.8c0.7,0,1.3,0.6,1.3,1.3s-0.6,1.3-1.3,1.3H2.9C2.1,19.3,1.6,18.7,1.6,18z"></path>
+                              </svg>
+                            </div>
+                            <div class="zoom-button-container">
+                              <svg title="zoom-out" id="zoom-out-681b8bfbd753569eebe7fe0e" class="svg-icon svg-icon-zoom-out u-pull-left" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
+                                <path fill="#55a6e0" d="M35.5,17.5v1c0,0.7-0.6,1.2-1.2,1.2H1.8c-0.7,0-1.2-0.6-1.2-1.2v-1c0-0.7,0.6-1.2,1.2-1.2h32.5 C34.9,16.2,35.5,16.8,35.5,17.5z"></path>
+                              </svg>
+                              <svg title="zoom-in" id="zoom-in-681b8bfbd753569eebe7fe0e" class="svg-icon svg-icon-zoom-in u-pull-right" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
+                                <path fill="#55a6e0" d="M18.5,35.5h-1c-0.7,0-1.2-0.6-1.2-1.2V1.8c0-0.7,0.6-1.2,1.2-1.2h1c0.7,0,1.2,0.6,1.2,1.2v32.5 C19.8,34.9,19.2,35.5,18.5,35.5z"></path>
+                                <path fill="#55a6e0" d="M35.5,17.5v1c0,0.7-0.6,1.2-1.2,1.2H1.8c-0.7,0-1.2-0.6-1.2-1.2v-1c0-0.7,0.6-1.2,1.2-1.2h32.5 C34.9,16.2,35.5,16.8,35.5,17.5z"></path>
+                              </svg>
+                            </div>
+                            <div class="page-number-container">
+                              <span class="ps-label-order">Page:
+                                <span id="page_num-681b8bfbd753569eebe7fe0e"></span> / <span id="page_count-681b8bfbd753569eebe7fe0e"></span>
+                              </span>
+                            </div>
+                          </div>
+                          <canvas id="the-canvas-681b8bfbd753569eebe7fe0e"></canvas>
+                        </div>
+
+                        <div id="pdf-fallback-download-container-681b8bfbd753569eebe7fe0e" class="pdf-fallback-container">
+                          <span>Please download the PDF to view this document.</span>
+                          <a id="download-version-681b8bfbd753569eebe7fe0e-locale-en-us-fallback" href="https://jasper.pactsafe.io/versions/681b8bfbd753569eebe7fe0e.pdf" target="_blank" rel="noopener" class="version-download-link inline-link">Download</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="contract-id-518863-version-6607235a5da682a17b6979c9" data-vid="6607235a5da682a17b6979c9" data-location="https://vault.pactsafe.io/s/116d43c3-cadd-4741-8ca1-92f005e5a64b/versions/6607235a5da682a17b6979c9.pdf" class="version-container js-version-container-518863 " style="display: none;">
                 <div id="version-languages-6607235a5da682a17b6979c9" class="version-translation-container">
                   <div id="version-6607235a5da682a17b6979c9-locale-en-us" class="version-translation version-locale-en-us" data-locale="en-us" data-locale-gen="en" data-title-translation="CCPA Notice to Candidates" style="display: block;">
                     <div class="row">
-                      <h5 class="effective-date" role="presentation">Effective March 29th 2024</h5>
+                      <h5 class="effective-date" role="presentation">Effective March 29th 2024&nbsp;&nbsp;<span class="light">to</span>&nbsp;&nbsp;May 7th 2025</h5>
                       <a id="download-version-6607235a5da682a17b6979c9-locale-en-us" href="https://jasper.pactsafe.io/versions/6607235a5da682a17b6979c9.pdf" target="_blank" rel="noopener" class="version-download-link inline-link">Download</a>
                     </div>
 
@@ -3586,81 +3704,6 @@ attachReadyHandlers();
                         <div id="pdf-fallback-download-container-6607235a5da682a17b6979c9" class="pdf-fallback-container">
                           <span>Please download the PDF to view this document.</span>
                           <a id="download-version-6607235a5da682a17b6979c9-locale-en-us-fallback" href="https://jasper.pactsafe.io/versions/6607235a5da682a17b6979c9.pdf" target="_blank" rel="noopener" class="version-download-link inline-link">Download</a>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-        <div id="contract-id-589982" class="contract-container group-item " data-location="s/116d43c3-cadd-4741-8ca1-92f005e5a64b/contracts/589982.pdf" data-id="589982" data-key="survey-rules" data-groups="" style="display: none;">
-          <div class="contract-header">
-            <h2>Survey Rules</h2>
-            <div class="row">
-              <div class="six columns" id="version-effective-date-589982">
-                  <label for="select-version-589982" class="select-version select-version-label">Version</label>
-                  <select name="versions-589982" id="select-version-589982" class="select-version select-version-select input-select">
-                      <option selected="" value="contract-id-589982-version-677c5244fe4b1bba6d2f26c3" class="contract-id-589982-version-677c5244fe4b1bba6d2f26c3" data-version="1.0">Version 1.0&nbsp;&nbsp;(Current)</option>
-                  </select>
-              </div>
-            </div>
-          </div>
-          <div id="contract-versions-589982">
-              <div id="contract-id-589982-version-677c5244fe4b1bba6d2f26c3" data-vid="677c5244fe4b1bba6d2f26c3" data-location="https://vault.pactsafe.io/s/116d43c3-cadd-4741-8ca1-92f005e5a64b/versions/677c5244fe4b1bba6d2f26c3.pdf" class="version-container js-version-container-589982 " style="display: block;">
-                <div id="version-languages-677c5244fe4b1bba6d2f26c3" class="version-translation-container">
-                  <div id="version-677c5244fe4b1bba6d2f26c3-locale-en-us" class="version-translation version-locale-en-us" data-locale="en-us" data-locale-gen="en" data-title-translation="Survey Rules" style="display: block;">
-                    <div class="row">
-                      <h5 class="effective-date" role="presentation">Effective January 6th 2025</h5>
-                      <a id="download-version-677c5244fe4b1bba6d2f26c3-locale-en-us" href="https://jasper.pactsafe.io/versions/677c5244fe4b1bba6d2f26c3.pdf" target="_blank" rel="noopener" class="version-download-link inline-link">Download</a>
-                    </div>
-
-
-                    <div class="table-of-contents">
-                      <hr class="divider table-of-contents-divider">
-                      <h3>Table of Contents</h3>
-                      <ol class="table-of-contents-links"></ol>
-                    </div>
-
-                    <hr class="divider body-divider">
-
-                    <div class="body js-body-677c5244fe4b1bba6d2f26c3">
-                        <div id="viewer-container-677c5244fe4b1bba6d2f26c3">
-                          <div id="viewer" class="pdfViewer"></div>
-                        </div>
-
-                        <div id="legacy-viewer-container-677c5244fe4b1bba6d2f26c3" style="display: none;">
-                          <div class="split-panel-left">
-                            <div class="page-switcher-container">
-                              <svg title="prev" id="prev-677c5244fe4b1bba6d2f26c3" class="svg-icon svg-icon-prev u-pull-left" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
-                                <path fill="#55a6e0" d="M16.9,30.3L4.6,18L16.9,5.7c0.5-0.5,0.5-1.4,0-1.8c-0.5-0.5-1.4-0.5-1.8,0L1.9,17.1 c-0.3,0.3-0.3,0.6-0.3,0.9s0.1,0.7,0.3,0.9L15,32.1c0.5,0.5,1.4,0.5,1.8,0C17.4,31.6,17.4,30.8,16.9,30.3z"></path>
-                                <path fill="#55a6e0" d="M33.1,19.3H4.3C3.6,19.3,3,18.7,3,18s0.6-1.3,1.3-1.3h28.8c0.7,0,1.3,0.6,1.3,1.3S33.9,19.3,33.1,19.3z"></path>
-                              </svg>
-                              <svg title="next" id="next-677c5244fe4b1bba6d2f26c3" class="svg-icon svg-icon-next u-pull-right" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
-                                <path fill="#55a6e0" d="M19.2,32.1c0.4,0.5,1.3,0.5,1.8,0l13.1-13.2c0.2-0.2,0.3-0.6,0.3-0.9s0-0.6-0.3-0.9L20.9,3.9 c-0.4-0.5-1.3-0.5-1.8,0c-0.5,0.4-0.5,1.3,0,1.8L31.4,18L19.1,30.3C18.6,30.8,18.6,31.6,19.2,32.1z"></path>
-                                <path fill="#55a6e0" d="M1.6,18c0-0.7,0.6-1.3,1.3-1.3h28.8c0.7,0,1.3,0.6,1.3,1.3s-0.6,1.3-1.3,1.3H2.9C2.1,19.3,1.6,18.7,1.6,18z"></path>
-                              </svg>
-                            </div>
-                            <div class="zoom-button-container">
-                              <svg title="zoom-out" id="zoom-out-677c5244fe4b1bba6d2f26c3" class="svg-icon svg-icon-zoom-out u-pull-left" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
-                                <path fill="#55a6e0" d="M35.5,17.5v1c0,0.7-0.6,1.2-1.2,1.2H1.8c-0.7,0-1.2-0.6-1.2-1.2v-1c0-0.7,0.6-1.2,1.2-1.2h32.5 C34.9,16.2,35.5,16.8,35.5,17.5z"></path>
-                              </svg>
-                              <svg title="zoom-in" id="zoom-in-677c5244fe4b1bba6d2f26c3" class="svg-icon svg-icon-zoom-in u-pull-right" width="24" height="24" viewBox="0 0 36 36" focusable="false" role="img">
-                                <path fill="#55a6e0" d="M18.5,35.5h-1c-0.7,0-1.2-0.6-1.2-1.2V1.8c0-0.7,0.6-1.2,1.2-1.2h1c0.7,0,1.2,0.6,1.2,1.2v32.5 C19.8,34.9,19.2,35.5,18.5,35.5z"></path>
-                                <path fill="#55a6e0" d="M35.5,17.5v1c0,0.7-0.6,1.2-1.2,1.2H1.8c-0.7,0-1.2-0.6-1.2-1.2v-1c0-0.7,0.6-1.2,1.2-1.2h32.5 C34.9,16.2,35.5,16.8,35.5,17.5z"></path>
-                              </svg>
-                            </div>
-                            <div class="page-number-container">
-                              <span class="ps-label-order">Page:
-                                <span id="page_num-677c5244fe4b1bba6d2f26c3"></span> / <span id="page_count-677c5244fe4b1bba6d2f26c3"></span>
-                              </span>
-                            </div>
-                          </div>
-                          <canvas id="the-canvas-677c5244fe4b1bba6d2f26c3"></canvas>
-                        </div>
-
-                        <div id="pdf-fallback-download-container-677c5244fe4b1bba6d2f26c3" class="pdf-fallback-container">
-                          <span>Please download the PDF to view this document.</span>
-                          <a id="download-version-677c5244fe4b1bba6d2f26c3-locale-en-us-fallback" href="https://jasper.pactsafe.io/versions/677c5244fe4b1bba6d2f26c3.pdf" target="_blank" rel="noopener" class="version-download-link inline-link">Download</a>
                         </div>
                     </div>
                   </div>
