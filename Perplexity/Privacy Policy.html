@@ -40,6 +40,80 @@
     
     <!-- End of headEnd -->
 <style type="text/css" data-framer-css="true"></style><style type="text/css">
+#__framer-editorbar-container {
+    align-items: center;
+    bottom: 50%;
+    display: flex;
+    gap: 8px;
+    position: fixed;
+    right: 10px;
+    transform: translateY(50%);
+    z-index: 2147483647;
+}
+
+#__framer-editorbar-label {
+    background-color: #111;
+    border-radius: 8px;
+    font-family: "Inter", "Inter-Regular", system-ui, Arial, sans-serif;
+    font-size: 12px;
+    height: fit-content;
+    opacity: 0;
+    padding: 4px 8px;
+    transition: opacity 0.4s ease-out;
+    font-weight: 500;
+}
+
+#__framer-editorbar-button {
+    all: unset;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+}
+
+#__framer-editorbar-label:has(+ #__framer-editorbar-button:hover) {
+    opacity: 1;
+}
+
+#__framer-editorbar-label, #__framer-editorbar-button {
+    background-color: #111;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+#__framer-editorbar-label, #__framer-editorbar-button:hover {
+    background-color: #282828;
+}
+
+#__framer-editorbar-loading-spinner {
+    width: 12px;
+    height: 12px;
+    -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAApNJREFUSA2tlUtLlFEYgEe7mtFFQ8NLFBG1SJAwahtiLVy5ceVSEPQH1LZf0Lp9FO1bdYNyI7gyBFcS2kAzilYq3sfxeYZ55Zv6FGfohWfOd97vnPd23u9MXeZoaeb1Q7gPHXAFzsAS5GACxiEPqVKXqs1kmtAPQi+cAtedToz1PJ8ExxPwDl7CAlRImoN7rBiF86ABHTiGAzMIh8n3O+ifwWc4EL0n5TGTYQijvjNSxbUadozInUeGZ3nuh1WYgpIkM+hGMwYajAgdrfUn+AaLoLTCAxiAOxCZxL4RdB+gZMjxEjwHo4hS8Jh5DR9hz0mKaNizegoNEI7Wee6FXJTISG6AUgDr+QImoAiHie+mwZJow/PRps4uwnsnRj8Epqc4voVJJ8eULOtW4BFYYjPpgjc+3IWI2sh/wFeoVl6xYQ48dDGLfjOwc/ygQqz595hUMVouS9QHBm4l6k3HWpnBLqicgVrlCxujSbR1Swd+UDpQYRS/oVaZZ2MWwlZBB9Zdxf+QTYw8SRgq6sAvz7vH6JULEB9USVHFjzZskgPRQR4ayxoXXIdaHdg9HrB2rErByWxZERnYtrWUzD0esDbtTmXPhzXwHrKLxEUbYGbVyDkWWwkdadfqbPmwDXZSCyh2VAf8BM/nOOJH5Y0QopMt2I5U/KO4DZZJB47XwEX+ex0mGroMV8sLwp56gyuGwiyW4SZ4c8bt2cZzO7jBNeqtsRHbeZ1g9krsMbhfYPv/c5gecA+4yAVuitFszE5Hjva872OMdXagF19JIoOYWyozMTI3J0tmA6gLvXPfO1cc/XOqOLe/HbjwD8yCXRD3VNJROEgatiRZMJsKsbZHia3nAdphtq8fkiWyXJbBe8uM1aXKPouNnz2Bm1kwAAAAAElFTkSuQmCC);
+    mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAApNJREFUSA2tlUtLlFEYgEe7mtFFQ8NLFBG1SJAwahtiLVy5ceVSEPQH1LZf0Lp9FO1bdYNyI7gyBFcS2kAzilYq3sfxeYZ55Zv6FGfohWfOd97vnPd23u9MXeZoaeb1Q7gPHXAFzsAS5GACxiEPqVKXqs1kmtAPQi+cAtedToz1PJ8ExxPwDl7CAlRImoN7rBiF86ABHTiGAzMIh8n3O+ifwWc4EL0n5TGTYQijvjNSxbUadozInUeGZ3nuh1WYgpIkM+hGMwYajAgdrfUn+AaLoLTCAxiAOxCZxL4RdB+gZMjxEjwHo4hS8Jh5DR9hz0mKaNizegoNEI7Wee6FXJTISG6AUgDr+QImoAiHie+mwZJow/PRps4uwnsnRj8Epqc4voVJJ8eULOtW4BFYYjPpgjc+3IWI2sh/wFeoVl6xYQ48dDGLfjOwc/ygQqz595hUMVouS9QHBm4l6k3HWpnBLqicgVrlCxujSbR1Swd+UDpQYRS/oVaZZ2MWwlZBB9Zdxf+QTYw8SRgq6sAvz7vH6JULEB9USVHFjzZskgPRQR4ayxoXXIdaHdg9HrB2rErByWxZERnYtrWUzD0esDbtTmXPhzXwHrKLxEUbYGbVyDkWWwkdadfqbPmwDXZSCyh2VAf8BM/nOOJH5Y0QopMt2I5U/KO4DZZJB47XwEX+ex0mGroMV8sLwp56gyuGwiyW4SZ4c8bt2cZzO7jBNeqtsRHbeZ1g9krsMbhfYPv/c5gecA+4yAVuitFszE5Hjva872OMdXagF19JIoOYWyozMTI3J0tmA6gLvXPfO1cc/XOqOLe/HbjwD8yCXRD3VNJROEgatiRZMJsKsbZHia3nAdphtq8fkiWyXJbBe8uM1aXKPouNnz2Bm1kwAAAAAElFTkSuQmCC);
+    -webkit-mask-size: 12px;
+    mask-size: 12px;
+    background-color: #fff;
+
+
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-name: __framer-loading-spin;
+    animation-timing-function: linear;
+}
+
+@keyframes __framer-loading-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style><style type="text/css">
 #__framer-editorbar {
     --padding-right: 10px;
     color-scheme: light;
@@ -55,6 +129,12 @@
 
 #__framer-editorbar.status_hidden {
     display: none;
+}
+
+#__framer-editorbar.status_visually_hidden {
+    --padding-right: 0px;
+    clip-path: circle(1px at calc(100% - 20px) calc(50% + 4px));
+    z-index: 2147483646;
 }
 
 #__framer-editorbar.status_measuring {
@@ -92,7 +172,7 @@ html.__framer-editorbar-smooth-gutter-transition:has(#__framer-editorbar:not(.st
     <!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'959a89695ea2342f',t:'MTc1MTU4OTI2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;959a89695ea2342f&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.6.2&quot;,&quot;token&quot;:&quot;92730c73a9e747fbb6a25e1d6657122d&quot;}" crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'959ea7abbc01cd86',t:'MTc1MTYzMjQ0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;959ea7abbc01cd86&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.6.2&quot;,&quot;token&quot;:&quot;92730c73a9e747fbb6a25e1d6657122d&quot;}" crossorigin="anonymous"></script>
 
 
-<iframe class="status_hidden" id="__framer-editorbar" src="https://edit.framer.com/beta?framerSiteId=95b5cc8ae7f015eabad543eef528a979c811885f9a3ca65168a6cb126da680ba&amp;source=www.perplexity.ai&amp;features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22editorBarOnPageEditing%22%3Afalse%7D&amp;loadStart=1751589266920"></iframe></body></html>
+<iframe class="status_hidden" id="__framer-editorbar" src="https://edit.framer.com/beta?framerSiteId=95b5cc8ae7f015eabad543eef528a979c811885f9a3ca65168a6cb126da680ba&amp;source=www.perplexity.ai&amp;features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22editorBarOnPageEditing%22%3Afalse%7D&amp;loadStart=1751632448481"></iframe></body></html>
