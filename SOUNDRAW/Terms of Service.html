@@ -87,7 +87,7 @@ gon.unwatchAll = function() {
   }
   return gon._timers = {};
 };
-window.gon.watchedVariables={"ad_visitor_campaign_expires_at":{"url":"/generate_music?_gl=1*ke5i4c*_up*MQ..*_gs*MQ..\u0026gclid=Cj0KCQiAiqDJBhCXARIsABk2kSkanbep_I3E_W-IgqzuLHoI6jwoNxgFtqaof1hWHIsJFiEr9zEXpi8aAqRmEALw_wcB","method":"GET","name":"ad_visitor_campaign_expires_at"}};
+window.gon.watchedVariables={"ad_visitor_campaign_expires_at":{"url":"/users","method":"GET","name":"ad_visitor_campaign_expires_at"}};
 //]]>
 </script>
     <link rel="canonical" href="https://soundraw.io/terms">
@@ -125,7 +125,7 @@ window.gon.watchedVariables={"ad_visitor_campaign_expires_at":{"url":"/generate_
     <meta property="twitter:image" content="https://cdn.soundraw.io/soundraw_ogp_EN.png">
     <meta name="csp-nonce" content="" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon-65fa692e0ba06519edfaf3224c823528eb2cec9997a3443c9d8d13bf8cb312f3.ico" />
-      <script src="/assets/sentry-72cd0614055e9f2713a39057aaa125234d949f6481cce8eb41b1f22d4986d433.js" data-turbo-track="reload" nonce=""></script>
+      <script src="/assets/sentry-fd00abff79369d7bb40f0e0139dbf5bb4dbaaf6155358b589369669a94cb3220.js" data-turbo-track="reload" nonce=""></script>
       <script src="https://api.goaffpro.com/loader.js?shop=esmixx3wyt" nonce=""></script>
     <link rel="stylesheet" href="/assets/application-2cae659a61f3242cc372ff2de8c1da1c429cdd4da9b1aa0a4ca6c635706b49c0.css" media="all" data-turbolinks-track="reload" nonce="" />
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js" nonce=""></script>
@@ -144,7 +144,7 @@ window.gon.watchedVariables={"ad_visitor_campaign_expires_at":{"url":"/generate_
 
       try {
         const consentObject = window.localStorage.getItem('cookie-consent');
-        const defaultConsent = 'granted';
+        const defaultConsent = 'denied';
 
         if (consentObject) {
           gtag('consent', 'default', JSON.parse(consentObject));
@@ -213,14 +213,409 @@ window.gon.watchedVariables={"ad_visitor_campaign_expires_at":{"url":"/generate_
     </noscript>
   <!-- End Facebook Pixel Code -->
 
-    <script src="/assets/application-5674554c3a404de193f0fcd6fea34439197a9e3a97667d81e83c4ecfd06407f3.js" data-turbo-track="reload" nonce=""></script>
+      <style>
+.cookie-consent-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1px 0 0;
+
+  color: #7b858d;
+  font-family: Inter;
+
+  border-radius: 4px;
+  overflow: hidden;
+  display: none;
+}
+
+.cookie-consent-container.show {
+  display: block;
+}
+
+.cookie-consent-container .cookie-consent-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem 0.75rem;
+  background-color: #17202b;
+  justify-content: center;
+}
+
+.cookie-consent-container.show-customize .cookie-consent-body {
+  position: relative;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem 0.75rem;
+}
+
+@media screen and (min-width: 720px) {
+  .cookie-consent-container .cookie-consent-body {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+.cookie-consent-container h1 {
+  font-size: 32px;
+}
+
+.cookie-consent-container p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.cookie-consent-container.show-customize p {
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 720px) {
+  .cookie-consent-container p {
+    font-size: 14px;
+  }
+}
+
+.cookie-consent-container button {
+    border: 0 solid;
+    box-sizing: border-box;
+    font-feature-settings: inherit;
+    color: #040b13;
+    font-family: inherit;
+    font-size: 13px;
+    font-variation-settings: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    text-transform: none;
+    -webkit-appearance: button;
+    background-image: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .375rem;
+    background-color: rgb(255 251 147/1);
+    padding-left: .75rem;
+    padding-right: .75rem;
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 720px) {
+  .cookie-consent-container button {
+    font-size: 14px;
+  }
+}
+
+.cookie-consent-container button.customize,
+.cookie-consent-container button.reject-all {
+  color: white;
+  background-color: #040b13;
+}
+
+.cookie-consent-container button.customize:hover,
+.cookie-consent-container button.reject-all:hover {
+  background-color: #040b13;
+}
+
+.cookie-consent-container button:hover {
+  background-color: rgb(255 213 46 / 1);
+}
+
+.cookie-consent-container label.form-control {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.75em;
+  cursor: pointer;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: white;
+  height: auto;
+}
+
+@media screen and (min-width: 720px) {
+  .cookie-consent-container label.form-control {
+    font-size: 14px;
+  }
+}
+
+.cookie-consent-container .form-control + .form-control {
+  margin-top: 1em;
+}
+
+.cookie-consent-container label.form-control--disabled {
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+:root {
+  --form-control-color: rgb(255 251 147/1);
+  --form-control-disabled: #959495;
+}
+
+
+.cookie-consent-container input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 3px 0 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+.cookie-consent-container input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+.cookie-consent-container input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.cookie-consent-container input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+.cookie-consent-container .action-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cookie-consent-container .checkbox-list {
+  display: none;
+}
+
+.cookie-consent-container.show-customize .checkbox-list {
+  display: block;
+}
+
+.cookie-consent-container.show-customize button.customize,
+.cookie-consent-container.show-customize button.accept-all,
+.cookie-consent-container.show-customize button.reject-all {
+  display: none;
+}
+
+.cookie-consent-container button.accept {
+  display: none;
+}
+
+.cookie-consent-container.show-customize button.accept {
+  display: block;
+}
+
+.cookie-consent-container .border-wrap {
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    #29abe2,
+    #8e98df,
+    #cda9e8,
+    #f2bbb7,
+    #fff893
+  );
+  padding: 2px;
+  margin: 0 5%;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 420px;
+}
+
+button.icon-close {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  color: white;
+  border-radius: 100%;
+  transition: background 0.2s ease-out;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #17202b;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.cookie-consent-container.show-customize button.icon-close {
+  display: flex;
+}
+
+
+button.icon-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+button.icon-close:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+</style>
+
+<div id="cookie-consent" class="cookie-consent-container">
+  <form action="">
+    <div class="cookie-consent-body">
+      <button class="icon-close" onclick="closeCustomize()" type="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 12 12"
+          fill="none"
+        >
+          <path
+            d="M10.7066 2.70624C11.0973 2.31562 11.0973 1.68124 10.7066 1.29062C10.316 0.899994 9.68164 0.899994 9.29102 1.29062L6.00039 4.58437L2.70664 1.29374C2.31602 0.903119 1.68164 0.903119 1.29102 1.29374C0.900391 1.68437 0.900391 2.31874 1.29102 2.70937L4.58477 5.99999L1.29414 9.29374C0.903516 9.68437 0.903516 10.3187 1.29414 10.7094C1.68477 11.1 2.31914 11.1 2.70977 10.7094L6.00039 7.41562L9.29414 10.7062C9.68477 11.0969 10.3191 11.0969 10.7098 10.7062C11.1004 10.3156 11.1004 9.68124 10.7098 9.29062L7.41602 5.99999L10.7066 2.70624Z"
+            fill="#EAF2FB"
+          />
+        </svg>
+      </button>
+
+      <p>We use cookies to provide the services and features offered on our website, and to improve our user experience</p>
+
+      <div class="checkbox-list">
+        <label class="form-control form-control--disabled">
+          <input type="checkbox" name="checkbox-disabled" disabled checked value="true" id="strictly" />
+          Strictly necessary
+        </label>
+        <label class="form-control">
+          <input type="checkbox" name="checkbox" value="true" id="tracking" />
+          Tracking and performance
+        </label>
+        <label class="form-control">
+          <input type="checkbox" name="checkbox" value="true" id="ads" />
+          Promotions and advertising
+        </label>
+      </div>
+
+      <div class="action-item-container">
+        <button type="button" class="customize" onclick="openCustomize()">Customize</button>
+        <button type="button" class="reject-all" onclick="rejectAll()">Reject all</button>
+        <button type="button" class="accept-all" onclick="acceptAll()">Accept all</button>
+        <button type="button" class="accept" onclick="accept()">Accept</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script nonce="">
+//<![CDATA[
+
+  const cookieConsentContainer = document.getElementById('cookie-consent');
+
+  const trackingCheck = document.getElementById('tracking');
+  const adsCheck = document.getElementById('ads');
+
+  if (window.localStorage.getItem('cookie-consent')) {
+    cookieConsentContainer.remove();
+  } else {
+    cookieConsentContainer.classList.add('show');
+  }
+
+  function openCustomize() {
+    cookieConsentContainer.classList.add('show-customize');
+  }
+
+  function closeCustomize() {
+    cookieConsentContainer.classList.remove('show-customize');
+  }
+
+  function closeCookieConsentAndSaveStatus() {
+    window.localStorage.setItem('cookie-consent', JSON.stringify({
+      'ad_storage': adsCheck.checked ? 'granted' : 'denied',
+      'ad_user_data': adsCheck.checked ? 'granted' : 'denied',
+      'ad_personalization': adsCheck.checked ? 'granted' : 'denied',
+      'analytics_storage': trackingCheck.checked ? 'granted' : 'denied'
+    }));
+    cookieConsentContainer.remove();
+  }
+
+  function updateGoogleAnalytics() {
+    gtag('consent', 'update', {
+      'ad_storage': adsCheck.checked ? 'granted' : 'denied',
+      'ad_user_data': adsCheck.checked ? 'granted' : 'denied',
+      'ad_personalization': adsCheck.checked ? 'granted' : 'denied',
+      'analytics_storage': trackingCheck.checked ? 'granted' : 'denied'
+    });
+  }
+
+  function acceptAll() {
+    trackingCheck.value = true;
+    adsCheck.value = true;
+    trackingCheck.checked = true;
+    adsCheck.checked = true;
+
+    updateGoogleAnalytics();
+    closeCookieConsentAndSaveStatus();
+  }
+
+  function accept() {
+    updateGoogleAnalytics();
+    closeCookieConsentAndSaveStatus();
+  }
+
+  function rejectAll() {
+    trackingCheck.value = false;
+    adsCheck.value = false;
+    trackingCheck.checked = false;
+    adsCheck.checked = false;
+
+    updateGoogleAnalytics();
+    closeCookieConsentAndSaveStatus();
+  }
+
+//]]>
+</script>
+    <script src="/assets/application-f648506e5d0cb230f48ed5c5d8d936e419376561e615bd003cd9e7bf0b6162e5.js" data-turbo-track="reload" nonce=""></script>
   </head>
 
   <body lang="en" class="bg-dark 100vh" >
     <link rel="stylesheet" href="/assets/tailwind-8932af00aad03b941297904d95c29cf842ddb41a3849bbcae8a6447d348e8408.css" />
     <div class="sticky top-0 left-0 w-full bg-dark z-40">
       <div id="header">
-        <script src="/assets/header-6aa59f80878136d33deb4475445bd299a3bcdd344182ecd647b738a149dfd739.js" nonce=""></script>
+        <script src="/assets/header-5ca426e880d0f641f583ab6e3e13be6333774e2c8270a5ed08fee830ccf129e9.js" nonce=""></script>
       </div>
       
     </div>
